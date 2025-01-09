@@ -5,12 +5,12 @@
  *     struct ListNode *next;
  * };
  */
-typedef struct ListNode node;
+typedef struct ListNode ListNode;
 
-node *mergeTwoLists(node *l1, node *l2)
+ListNode *mergeTwoLists(ListNode *l1, ListNode *l2)
 {
-    node *result = malloc(sizeof(node));
-    node *current = result;
+    ListNode *result = malloc(sizeof(ListNode));
+    ListNode *current = result;
     while (l1 != NULL && l2 != NULL)
     {
         if (l1->val < l2->val)
