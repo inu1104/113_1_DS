@@ -6,12 +6,12 @@
  * };
  */
 
-typedef struct ListNode node;
+typedef struct ListNode ListNode;
 
-node *addTwoNumbers(node *l1, node *l2)
+ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
 {
     int value, carry = 0;
-    node *current, *result = (node *)malloc(sizeof(node));
+    ListNode *current, *result = (ListNode *)malloc(sizeof(ListNode));
     current = result;
     while (l1 != NULL || l2 != NULL || carry != 0)
     {
@@ -29,7 +29,7 @@ node *addTwoNumbers(node *l1, node *l2)
         carry = value / 10;
         value %= 10;
 
-        node *new = (node *)malloc(sizeof(node));
+        ListNode *new = (ListNode *)malloc(sizeof(ListNode));
         new->val = value;
         new->next = NULL;
         current->next = new;
