@@ -5,8 +5,10 @@
  *     struct ListNode *next;
  * };
  */
-struct ListNode* swapPairs(struct ListNode* head) {
-    struct ListNode *current, *next, *prev;
+typedef struct ListNode ListNode;
+
+ListNode* swapPairs(ListNode* head) {
+    ListNode *current, *next, *prev;
     current = head;
     while(current!= NULL && current->next!= NULL){
         next = current->next;
