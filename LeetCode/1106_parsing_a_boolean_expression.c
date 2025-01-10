@@ -2,7 +2,7 @@
 
 typedef struct stack
 {
-    char arr[20004];
+    char arr[10004];
     int size;
 } Stack;
 
