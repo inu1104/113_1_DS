@@ -1,10 +1,10 @@
-void merge(int *arr, int head, int rear)
+void mergesort(int *arr, int head, int rear)
 {
     if (head == rear)
         return;
     int middle = (head + rear) / 2;
-    merge(arr, head, middle);
-    merge(arr, middle + 1, rear);
+    mergesort(arr, head, middle);
+    mergesort(arr, middle + 1, rear);
 
     int idx_l = head, idx_r = middle + 1, idx_merged = 0;
     int *temp = (int *)malloc((rear - head + 1) * sizeof(int));
@@ -42,5 +42,5 @@ void merge(int *arr, int head, int rear)
 void sortColors(int *nums, int numsSize)
 {
     int head = 0, rear = numsSize - 1;
-    merge(nums, head, rear);
+    mergesort(nums, head, rear);
 }
